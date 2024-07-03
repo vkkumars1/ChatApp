@@ -4,23 +4,23 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  
   "dependencies": {
     "animate.css": "^4.1.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-toastify": "^10.0.5",
     "react-tooltip": "^5.27.0",
     "socket.io": "^4.7.5",
-    "socket.io-client": "^4.7.5"
+    "socket.io-client": "^4.7.5",
+    "vercel": "^34.2.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
-const socket = io('http://localhost:3000');
+const socket = io(process.env.REACT_APP_BACKEND_URL || 'http://localhost:3000');
 
 const App = () => {
   const [chat, setChat] = useState(false);
@@ -73,6 +73,7 @@ const App = () => {
               data-tooltip-id="message-input-tooltip"
               data-tooltip-content="Type your message here"
             />
+            
             <Tooltip id="message-input-tooltip" />
             <button
               type='submit'

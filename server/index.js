@@ -181,7 +181,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173', // Ensure this matches your frontend URL exactly
+        origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Ensure this matches your frontend URL exactly
         methods: ['GET', 'POST']
     }
 });
@@ -198,7 +198,7 @@ io.on('connection', (socket) => {
         console.log('User disconnected');
     });
 });
-
-server.listen(3000, () => {
+const PORT =  process.env.PORT || 3000;
+server.listen(PORT, () => {
     console.log('Server is running on port 3000');
 });
