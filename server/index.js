@@ -7,17 +7,17 @@ const path = require("path");
 require('dotenv').config();
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Ensure this matches your frontend URL exactly
+    origin: 'https://chatapp-gkqq.onrender.com', // Ensure this matches your frontend URL exactly
     methods: ['GET', 'POST']
 }));
 
 const server = http.createServer(app);
 //Backend Folder path
-const __dirname = path.resolve();
+
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173', // Ensure this matches your frontend URL exactly
+        origin: 'https://chatapp-gkqq.onrender.com', // Ensure this matches your frontend URL exactly
         methods: ['GET', 'POST']
     }
 });
